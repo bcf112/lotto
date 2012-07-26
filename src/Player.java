@@ -5,7 +5,10 @@ public class Player {
 	 */
 	public static void main(String[] args) {
 		Lotto lotto = new Lotto();
-		lotto.printLotto();
+		int[] numbers=lotto.getLotto();
+		for(int i=0; i<numbers.length; i++){
+			System.out.println(numbers[i]);
+		}
 	}
 
 }

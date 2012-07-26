@@ -10,16 +10,18 @@ public class Lotto {
 	Random random = new Random();
 
 	public static void main(String[] args) {
-		new Lotto().printLotto();
+		new Lotto().getLotto();
 	}
 
-	public void printLotto() {
+	public int[] getLotto() {
+		int[] numbers=new int[6];
 		for (int i = 0; i < 6; i++) {
-			System.out.println(getNumber(random));
+			numbers[i]=getNumber();
 		}
+		return numbers;
 	}
 
-	private int getNumber(Random random) {
+	private int getNumber() {
 		return random.nextInt(45) + 1;
 	}
 
